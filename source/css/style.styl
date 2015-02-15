@@ -7,6 +7,13 @@
 body
   overflow hidden
 
+a:hover
+  text-decoration none
+
+hr
+  border-top 1px solid #333
+  opacity 0.4
+
 .unloaded
   .moleskine-parent
     transform translateY(-100px)
@@ -17,10 +24,10 @@ body
 
 .pg2
   border-radius 12px 0 0 12px
-  border 10px solid grey
+  border 10px solid #333
   border-right 0 solid
   height 100%
-  background-image linear-gradient(left, white 95%, grey-da 100%)
+  background-image linear-gradient(left, #fff 95%, #dadada 100%)
 .pg3
   width 210px
   height 224px
@@ -54,6 +61,8 @@ pager(groupon)
 pager(cloudflare)
 pager(jawbone)
 pager(twitch)
+pager(shoptiquess)
+pager(plangrid)
 
 .thankyou > div
   width 211px
@@ -63,7 +72,7 @@ pager(twitch)
   margin-top 110px
 
 #content
-  background white // fallback background
+  background #fff // fallback background
   background-image linear-gradient(gradient-white, gradient-bluegrey), url(../img/bg.jpg)
   background-size cover
   background-position center center
@@ -102,44 +111,43 @@ pager(twitch)
   position absolute
   top 0
   left 0
-  color yc-orange
+  color #333
   z-index 100
-  padding 17px
+  padding 10px
   width 100%
   .active
     font-weight 600
+    border-bottom 1px solid #333
   a
     color yc-orange
+    color #333
     padding 4px 0
-    margin 0 5px
+    margin 0 10px
     &:hover
       text-decoration none
-      color yc-orange
-      border-bottom 1px solid yc-orange
-    strong
-      color yc-orange
-  #years
+      border-bottom 1px solid #333
+  .years
     float left
-  #buy
+    padding 10px
+  .buy
     float right
-    .bgc-logo
-      height 20px
+    padding 10px
+    &:hover
+      border-style none
 
 #body
   width 914px
   height 562px
   top 50%
   position absolute
-  margin-top -327px
-  @media screen and (max-height: 675px)
-    margin-top -285px
+  margin-top -300px
+  @media screen and (max-height: 710px)
+    margin-top -260px
   left 50%
   margin-left -457px
-  hr
-    border-top 1px solid rgba(255,255,255,0.3)
   .share
     width 450px
-    color white
+    color #333
     padding 100px 50px
     position relative
     z-index 20
@@ -147,14 +155,17 @@ pager(twitch)
     right 0
     top 0
     p
-      margin-bottom 8px
-    .social a
-      display block
-      color rgba(255,255,255,0.8)
-      padding 5px
-      &:hover
-        text-decoration none
-        color white
+      font-size 18px
+    .social
+      color #333
+      a
+        display block
+        color #666
+        padding 4px 0
+        font-size 16px
+        &:hover
+          text-decoration none
+          color #000
     i
       display inline-block
       text-align center
@@ -163,7 +174,6 @@ pager(twitch)
       z-index 0
   .info
     width 450px
-    color white
     padding 90px 40px 20px 20px
     position relative
     transition transform 0.5s ease-out
@@ -172,6 +182,8 @@ pager(twitch)
     &.open
       position static
       z-index 0
+    a 
+      color #666
   .moleskine-parent
     transition transform 0.5s ease-out
     width 350px
@@ -186,7 +198,7 @@ pager(twitch)
       border 10px solid #333
       border-left 0 solid
       height 100%
-      background-image linear-gradient(right, white 95%, grey-da 100%)
+      background-image linear-gradient(right, #fff 95%, #dadada 100%)
     .back-outside > div
       width 457px
       height 562px
@@ -206,7 +218,7 @@ pager(twitch)
         content " "
         display block
       .title
-        background-color grey-e3
+        background-color #e3e3e3
         width 100%
         border-top 5px solid border-color
         border-bottom 5px solid border-color
@@ -217,9 +229,9 @@ pager(twitch)
       width 447px
       height 542px
     .inside.even
-         background-image linear-gradient(left, white 95%, grey-da 100%)
+         background-image linear-gradient(left, #fff 95%, #dadada 100%)
     .inside.odd
-         background-image linear-gradient(right, white 95%, grey-ca 100%)
+         background-image linear-gradient(right, #fff 95%, #cacaca 100%)
     .page-wrapper
       perspective 2000px
       cursor -webkit-grab
@@ -246,7 +258,7 @@ pager(twitch)
         content " "
         display block
       .title
-        background-color grey-e3
+        background-color #eee
         width 100%
         border-top 5px solid border-color
         border-bottom 5px solid border-color
@@ -256,6 +268,7 @@ pager(twitch)
         padding 25px
         .logo
           width 50px
+          border 4px solid #333
       .strap
         width 22px
         height 565px
@@ -276,7 +289,7 @@ pager(twitch)
           content " "
           display block
 
-#logo
+.logo
   width 50px
   height 50px
   background-image url(../img/logo.png)
@@ -289,13 +302,16 @@ h1, h2
     display block
     font-size 20px
     font-weight normal
-    opacity 0.6
+    opacity 0.7
 h2
   font-size 25px
-
+p
+  opacity 0.8
+  margin 20px 0
 .byline
   font-size 16px
-  color rgba(255,255,255,0.6)
+  color #333
+  opacity 0.8
   .signature
     image '../img/signature.png' 195px 39px
     background-repeat no-repeat
@@ -305,7 +321,7 @@ h2
     text-indent -90000px
     margin-top 15px
   .readme
-    color white
+    color black
     text-decoration none
     display inline-block
     background-image url(../img/readme.png)
@@ -317,12 +333,13 @@ h2
     &:hover
       opacity 1
   .social
-    border-top 1px solid rgba(255,255,255,0.3)
+    border-top 1px solid rgba(51,51,51,0.4)
     padding-top 10px
     margin-top 10px
+    color #666
     a
       display inline-block !important
-      color rgba(255,255,255,0.6)
+      color rgba(51,51,51,0.6)
       text-decoration none
       font-size 18px
       padding-right 8px
@@ -330,7 +347,7 @@ h2
         padding-left 5px
         font-size 13px
       &:hover
-        color white
+        color black
       &.hire
         padding-left 14px
 
@@ -345,17 +362,18 @@ h2
       .company
         a
           opacity 0.3
-
-  @media screen and (max-height: 675px)
+  @media screen and (max-height: 710px)
     display none
   #company-table
     display table-row
     .company
       display table-cell
-      width 10%
+      width 8%
+      &.wider
+        width 9%
       a
         display block
-        padding 15px 20px
+        padding 15px
         text-decoration none
         transition 0.3s ease-out
         opacity 0.8
@@ -364,9 +382,10 @@ h2
           transform translateY(-7px)
         h3
           text-align center
-          color white
-          font-size 12px
+          color #fff
+          font-size 15px
           font-weight normal
+          height 32px
         span
           height 30px
           display block
@@ -374,26 +393,30 @@ h2
           background-size contain
           background-position center center
           background-image url(../img/logo-temp.png)
-      &.groupon span
-        background-image url(../img/logos/groupon.png)
-      &.svangel span
-        background-image url(../img/logos/svangel.png)
-      &.cloudflare span
-        background-image url(../img/logos/cloudflare.png)
-      &.jawbone span
-        background-image url(../img/logos/jawbone.png)
-      &.twitch span
-        background-image url(../img/logos/twitch.png)
-      &.indiegogo span
-        background-image url(../img/logos/indiegogo.png)
-      &.instagram span
-        background-image url(../img/logos/instagram.png)
-      &.linkedin span
-        background-image url(../img/logos/linkedin.png)
-      &.whatsapp span
-        background-image url(../img/logos/whatsapp.png)
-      &.pebble span
-        background-image url(../img/logos/pebble.png)
+      &.homejoy span
+        background-image url(../img/logos/homejoy.png)
+      &.front span
+        background-image url(../img/logos/front.png)
+      &.blackgirlscode span
+        background-image url(../img/logos/blackgirlscode.png)
+      &.watsi span
+        background-image url(../img/logos/watsi.png)
+      &.apptimize span
+        background-image url(../img/logos/apptimize.png)
+      &.womencom span
+        background-image url(../img/logos/womencom2.png)
+      &.ycombinator span
+        background-image url(../img/logos/ycombinator.png)
+      &.mattermark span
+        background-image url(../img/logos/mattermark.png)
+      &.claralabs span
+        background-image url(../img/logos/claralabs.png)
+      &.dropbox span
+        background-image url(../img/logos/dropbox.png)
+      &.shoptiques span
+        background-image url(../img/logos/shoptiques.png)
+      &.plangrid span
+        background-image url(../img/logos/plangrid.png)
 
 #people
   height 130px
@@ -555,7 +578,7 @@ person(width, offset)
 .jack-attack
   text-align center
   margin-top -28px
-  color white
+  color #fff
   font-size 13px
   transform translateY(20px)
   opacity 0
@@ -567,53 +590,45 @@ person(width, offset)
     color rgba(255,255,255,0.6)
     &:hover
       text-decoration none
-      color white
+      color #fff
 
-.amazon
-  z-index 10
-  position absolute
-  border 2px solid rgba(100,100,100,0.5442)
-  text-indent -10000px
-  background-color rgba(0,0,0,0.05)
-  opacity 0
-  transition opacity 0.3s ease-out
-  &:hover
-    opacity 1
-  &.book-spirit
-    transform rotate(-2deg)
-    width 310px
-    height 110px
-    left 20px
-    top 98px
-  &.book-score
-    transform rotate(0deg)
-    width 315px
-    height 150px
-    left 20px
-    top 198px
-  &.music
-    transform rotate(0deg)
-    width 80px
-    height 40px
-    left 10px
-    top 10px
+// .amazon
+//   z-index 10
+//   position absolute
+//   border 2px solid rgba(100,100,100,0.5442)
+//   text-indent -10000px
+//   background-color rgba(0,0,0,0.05)
+//   opacity 0
+//   transition opacity 0.3s ease-out
+//   &:hover
+//     opacity 1
+//   &.book-spirit
+//     transform rotate(-2deg)
+//     width 310px
+//     height 110px
+//     left 20px
+//     top 98px
+//   &.book-score
+//     transform rotate(0deg)
+//     width 315px
+//     height 150px
+//     left 20px
+//     top 198px
+//   &.music
+//     transform rotate(0deg)
+//     width 80px
+//     height 40px
+//     left 10px
+//     top 10px
 
 .buy
-  margin-top 20px
-  display block
-  color white
+  color #333
   background-color rgba(0,0,0,0.1)
   padding 10px
   border-radius 5px
   box-shadow 1px 1px rgba(255,255,255,0.1), 1px 1px rgba(0,0,0,0.2) inset
-  text-shadow 1px 1px rgba(0,0,0,0.3)
+  .bgc-logo
+    height 20px
   &:hover
-    text-decoration none
-    color white
     background-color rgba(0,0,0,0.2)
-    span
-      color rgba(255,255,255,0.8)
-  span
-    color rgba(255,255,255,0.5)
-    display block
-
+    border-style none
