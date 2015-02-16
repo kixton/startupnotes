@@ -11,6 +11,9 @@ Speakers at the 2015 Female Founders Conference:
 * [**Tracy Young**](http://www.femalefounderstories.com/tracy-young.html) - Founder, [PlanGrid](http://www.plangrid.com/)
 * **Kimberly Bryant** - Founder, [Black Girls Code](http://www.blackgirlscode.com/)
 * **Ruchi Sanghvi** - Founder, Cove (acquired by [Dropbox](https://www.dropbox.com/)); First female engineer at [Facebook](https://www.facebook.com/)
+* [***Mathilde Collin***](http://www.femalefounderstories.com/mathilde-collin.html) - Founder, Front
+* [***Danielle Morrill***](http://www.femalefounderstories.com/danielle-morrill.html) - Founder, Mattermark
+* ***Maran Nelson*** - Founder, Clara Labs
 
 ------
 
@@ -28,22 +31,22 @@ Speakers at the 2015 Female Founders Conference:
 [Fork on Github](https://github.com/gkoberger/startupnotes/fork)
 
 Create a local clone of your fork using your SSH URL of the forked repo  
-```git clone git@github.com:YOURGITHUBUSERNAME/startupnotes.git```
+    git clone git@github.com:YOURGITHUBUSERNAME/startupnotes.git
 
 Make sure you have **Ruby 1.9.3 or higher** installed. If not, you can follow these [instructions](https://www.ruby-lang.org/en/documentation/installation/) to install Ruby.  
-```ruby -v```  
+    ruby -v
 
 Install Ruby gems  
-```bundle install```
+    bundle install
 
 Check if you have Node.js installed. If not, you can follow these [instructions](https://academy.appgyver.com/installwizard/steps#/install-nvm) to install Node.js  
-```node -v```  
+    node -v
 
 Install nib  
- ```npm install nib```
+     npm install nib
 
 Start the server locally using middleman  
- ```bundle exec middleman server```
+     bundle exec middleman server
 
 View the site locally in your browser  
 [http://localhost:4567](http://localhost:4567)
